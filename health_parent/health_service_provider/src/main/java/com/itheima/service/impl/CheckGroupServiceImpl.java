@@ -22,7 +22,6 @@ public class CheckGroupServiceImpl implements CheckGroupService{
 
 	@Autowired
 	private CheckGroupMapper checkGroupmapper;
-	
 	@Override
 	public CheckGroup findById(Integer id) {
 		// TODO Auto-generated method stub
@@ -96,5 +95,10 @@ public class CheckGroupServiceImpl implements CheckGroupService{
 				checkGroupmapper.updateCheckGroupIdAndCheckitemId(map);
 			}
 		}
+	}
+
+	@Override
+	public List<CheckGroup> findAll() {
+		return checkGroupmapper.findAll();
 	}
 }
